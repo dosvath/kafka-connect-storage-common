@@ -27,7 +27,7 @@ public interface WAL {
 
   void append(String tempFile, String committedFile) throws ConnectException;
 
-  void apply() throws ConnectException;
+  long apply() throws ConnectException;
 
   void truncate() throws ConnectException;
 
